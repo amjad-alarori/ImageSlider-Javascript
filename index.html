@@ -7,24 +7,43 @@
     <style>
         #slideholder {
             height: 225px;
-            width: 225px;
-            border: 3px black solid;
+            width: 1000px;
             transition: 2s;
+            background-size: cover;
+            border: 1px solid black;
+        }
+
+        #slideholder1 {
+            height: 225px;
+            width: 1000px;
+            transition: 2s;
+            background-size: cover;
+            border: 1px solid black;
 
 
         }
+        #slideholder2 {
+            height: 225px;
+            width: 1000px;
+            transition: 2s;
+            background-size: cover;
+            border: 1px solid black;
+
+
+        }
+        
     </style>
 </head>
 <body>
-    <div id="slideholder"></div>
+    <div id="slideholder" class="img">
     <script>
-        var plaatjes = [1,2,3,4,5,6];
+        var plaatjes = [1,2,3];
         var teller = 0;
         var slideholder = document.getElementById("slideholder");
-        slideholder.style.backgroundImage = "url('imgs/img1.jpg')";
+        slideholder.style.backgroundImage = "url('../img.jpg')";
 
         slideholder.addEventListener("click", function(){
-            slideholder.style.backgroundImage = "url('imgs/img" + getAap() +".jpg')";
+            slideholder.style.backgroundImage = "url('img/img" + getAap() +".jpg')";
         });
         function getAap() {
            if (teller >= plaatjes.length) {
@@ -37,7 +56,57 @@
 
         }
 
-    </script>
-<!-- <script src="../javascript/imageslider.js"></script>-->    
+    </script> 
+    </div>
+
+
+    <div id="slideholder1" class="pic">
+    <script>
+        var plaatjes1 = [1,2,3];
+        var teller1 = 0;
+        var slideholder1 = document.getElementById("slideholder1");
+        slideholder1.style.backgroundImage = "url('../pic.jpg')";
+
+        slideholder1.addEventListener("click", function(){
+            slideholder1.style.backgroundImage = "url('pic/pic" + getAap1() +".jpg')";
+        });
+        function getAap1() {
+           if (teller1 >= plaatjes1.length) {
+               teller1 = 1;
+           } else {
+               teller1 ++;
+           }
+            console.log(teller1);
+            return teller1;
+
+        }
+
+    </script> 
+    </div>
+
+
+    <div id="slideholder2" class="plaat">
+    <script>
+        var plaatjes2 = [1,2,3];
+        var teller2 = 0;
+        var slideholder2 = document.getElementById("slideholder2");
+        slideholder2.style.backgroundImage = "url('../plaat.jpg')";
+
+        slideholder2.addEventListener("click", function(){
+            slideholder2.style.backgroundImage = "url('plaat/plaat" + getAap2() +".jpg')";
+        });
+        function getAap2() {
+           if (teller2 >= plaatjes2.length) {
+               teller2 = 1;
+           } else {
+               teller2 ++;
+           }
+            console.log(teller2);
+            return teller2;
+
+        }
+
+    </script> 
+    </div>
 </body>
 </html>
